@@ -28,9 +28,9 @@ const pathname = usePathname()
         <Link href={"/"}>LOGO</Link>
       </h3>
       <div className="text-lg flex items-center gap-12 cursor-pointer ">
-        {menus?.map((menu) => (
+        {menus?.map((menu, index) => (
           <>
-            <div className="group">
+            <div className="group" key={index}>
               <p className="relative">
                 <Link href={menu.path} className={pathname  === menu.path ? "text-green-500 font-bold underline" : ""}>{menu.title}</Link>
               </p>
